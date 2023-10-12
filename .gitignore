@@ -4,6 +4,8 @@
 
 # 资源文件 不公开
 /JingHaiApp/Assets
+/JingHaiApp/Styles
+/JingHaiApp/Themes
 
 # 第三方库
 /packages
