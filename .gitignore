@@ -1,0 +1,9 @@
+# 调试时产生的文件
+/JingHaiApp/bin
+/JingHaiApp/obj
+
+# 资源文件 不公开
+/JingHaiApp/Assets
+
+# 第三方库
+/packages

@@ -1,0 +1,40 @@
+﻿<Page x:Class="JingHaiApp.Pages.HomePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:JingHaiApp.Pages"
+        mc:Ignorable="d" 
+        d:DesignHeight="570" d:DesignWidth="920"
+        Title="HomePage">
+
+    <Border CornerRadius="5" Background="{DynamicResource SecundaryBackgroundColor}">
+        <StackPanel>
+            <Grid Height="570">
+                <Label Content="" x:Name="WelcomeText" Foreground="Black" FontSize="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="42,10,0,0"/>
+                <Label Content="" x:Name="TitleName" Foreground="Black" FontSize="30" Width="240" Height="50"  HorizontalAlignment="Left" Margin="155,23,0,497"/>
+                <Label Content="欢迎使用京海 App" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Top" Width="260" Height="50" Margin="0,10,25,0"/>
+                <Border CornerRadius="5" x:Name="Card1" Width="313" Height="70" HorizontalAlignment="Left" Margin="46,152,0,348">
+                    <Grid Width="300" Height="70">
+                        <Label Content="你的身份是" x:Name="Card1Text1" FontSize="20" Width="111" Height="35" HorizontalAlignment="Left" Margin="21,18,0,17"/>
+                        <Label Content="" x:Name="Card1Text2" FontSize="20" Width="116" Height="35" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="172,18,0,17" />
+                    </Grid>
+                </Border>
+                <Border CornerRadius="5" x:Name="Card2" Height="70" Margin="416,152,46,348">
+                    <Grid>
+                        <Label Content="你已经加入京海工会有" x:Name="Card2Text1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Width="190" Margin="10,0,0,0" />
+                        <Label Content="" x:Name="Card2Text2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" />
+                    </Grid>
+                </Border>
+                <Border CornerRadius="5" x:Name="Card3" HorizontalAlignment="Left" Height="257" Margin="42,268,0,0" VerticalAlignment="Top" Width="832">
+                    <Grid>
+                        <Label Content="现在你可以做的事有" x:Name="Card3Text1" FontSize="20" Width="190" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0"/>
+                        <Label Content="" x:Name="Card3Text2" FontSize="20" Width="752" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,80,0,0"/>
+                        <Label Content="" x:Name="Card3Text3" FontSize="20" Width="752" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,130,0,0"/>
+                        <Label Content="" x:Name="Card3Text4" FontSize="20" Width="752" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,180,0,0"/>
+                    </Grid>
+                </Border>
+            </Grid>
+        </StackPanel>
+    </Border>
+</Page>
