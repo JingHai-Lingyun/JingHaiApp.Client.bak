@@ -87,6 +87,40 @@ namespace JingHaiApp
             radiobtn2.IsChecked = false;
         }
 
+        // 自定义移动事件
+        private void MoveBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            // 当鼠标左键按下时，记录当前鼠标位置和窗口位置
+            Mouse.Capture(sender as UIElement);
+            var element = sender as FrameworkElement;
+            var mainWindow = Window.GetWindow(element);
+            var startPoint = e.GetPosition(mainWindow);
+
+            // 绑定鼠标移动和释放事件
+            element.MouseMove += (s, args) =>
+            {
+                if (e.LeftButton == MouseButtonState.Pressed)
+                {
+                    // 计算窗口新位置
+                    var relativePosition = args.GetPosition(mainWindow);
+                    var offsetX = relativePosition.X - startPoint.X;
+                    var offsetY = relativePosition.Y - startPoint.Y;
+                    var newLeft = mainWindow.Left + offsetX;
+                    var newTop = mainWindow.Top + offsetY;
+
+                    // 更新窗口位置
+                    mainWindow.Left = newLeft;
+                    mainWindow.Top = newTop;
+                }
+            };
+
+            element.MouseLeftButtonUp += (s, args) =>
+            {
+                // 释放鼠标捕获
+                Mouse.Capture(null);
+            };
+        }
+
         // 变量操作
         public string UserName;
         public void SetUserName(string name){ UserName = name; }
