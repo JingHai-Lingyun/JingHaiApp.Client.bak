@@ -9,7 +9,7 @@ using System.Windows;
 namespace JingHaiApp
 {
     /// <summary>
-    /// Lógica de interacción para App.xaml
+    /// App.xaml 的交互逻辑
     /// </summary>
     public partial class App : Application
     {
