@@ -24,5 +24,15 @@ namespace JingHaiApp
         {
             InitializeComponent();
         }
+
+        private void BtnClose(object sender, RoutedEventArgs e) /// 关闭按钮
+        {
+            Close();
+        }
+
+        private void BtnMinimize(object sender, RoutedEventArgs e) /// 最小化按钮
+        {
+            WindowState = WindowState.Minimized;
+        }
     }
 }
